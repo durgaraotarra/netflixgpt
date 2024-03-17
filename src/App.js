@@ -3,8 +3,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Error, Landing, Signin, Signup } from "./pages";
 import appStore from "./store/store";
 import Layout from "./pages/Layout";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const appRouter = createBrowserRouter([
   {
@@ -13,10 +13,10 @@ const appRouter = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path: '/',
-        element: <Landing />
-      }
-    ]
+        path: "/",
+        element: <Landing />,
+      },
+    ],
   },
   {
     path: "/signin",

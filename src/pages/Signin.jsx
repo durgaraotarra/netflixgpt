@@ -26,9 +26,11 @@ const Signin = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        const {name, email, displayName, photoUrl} = user;
+        console.log(user);
+        const {name, email, displayName, photoUrl, uid} = user;
+        localStorage.setItem('key',uid);
         dispatch(addUser({
-          name, email, displayName, photoUrl
+          name, email, displayName, photoUrl, uid
         }));
         toast.success("user signin");
         navigate('/');
